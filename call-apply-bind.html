@@ -1,0 +1,26 @@
+<script>
+let obj={
+    firstName:"Upendar",
+    lastName:"Reddy",
+}
+
+let obj2={
+    firstName:"Akhil",
+    lastName:"Reddy"
+}
+let obj3={
+    firstName:"Prakash",
+    lastName:"Reddy"
+}
+
+function f1(state,town){
+    console.log(this.firstName + " " + this.lastName + state + town);
+}
+
+f1.call(obj,"telanagana","mothkur");
+
+f1.apply(obj2,["telangana","mothkur"]);
+let b=f1.bind(obj3,"Andra","A");
+b();
+
+</script>
